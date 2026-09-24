@@ -3,6 +3,14 @@
 Support de la journée de remise à niveau biologie (public info / data, débutants Python).
 Fil rouge : la drépanocytose — une seule lettre change dans le gène *HBB*.
 
+Le notebook part de quatre gènes de globine exprimés dans le globule rouge — `HBA1`, `HBB`,
+`HBD`, `HBG1` — séquencés chez un sujet de référence et chez le patient. La première question
+est de trouver **lequel des quatre est muté** ; la suite en déroule l'effet, du nucléotide
+jusqu'à l'acide aminé.
+
+Les séquences sont les séquences codantes RefSeq réelles (`NM_000518.5`, `NM_000558.5`,
+`NM_000519.4`, `NM_000559.3`). Seul `HBB` diffère chez le patient, d'une base.
+
 ## Ouvrir le notebook
 
 Page d'accueil, à donner aux participants :
@@ -22,8 +30,9 @@ niveau en cours de route.
 ## Ce dont le notebook a besoin
 
 Rien d'autre qu'un compte Google. Les séquences FASTA sont écrites en dur dans la première cellule,
-aucune bibliothèque externe n'est installée, aucun fichier n'est téléchargé. `data/` ne contient que
-les mêmes séquences au format FASTA, pour référence.
+qui les écrit sur le disque de la session puis les relit — aucune bibliothèque externe n'est
+installée, aucun fichier n'est téléchargé. `data/` contient les deux mêmes fichiers multi-FASTA
+(`reference.fasta`, `patient.fasta`), pour référence.
 
 ## Corrigé
 
