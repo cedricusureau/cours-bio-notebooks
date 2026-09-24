@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Notebook 1 — De l'ADN du patient à la protéine</title>
+<style>
+  :root{
+    --ink:#0f172a; --muted:#64748b; --line:#e2e8f0; --brand:#2563eb; --brand2:#0ea5e9;
+    --accent:#f43f5e; --good:#16a34a; --soft:#f8fafc;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;padding:32px 20px 56px;background:#fff;color:var(--ink);
+       font-family:-apple-system,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;line-height:1.5}
+  .wrap{max-width:760px;margin:0 auto}
+  .kicker{display:inline-block;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;
+          color:var(--brand);font-weight:700;margin-bottom:.4em}
+  h1{font-size:1.75rem;line-height:1.2;margin:.1em 0 .3em;letter-spacing:-.01em}
+  .barline{height:5px;width:120px;background:linear-gradient(90deg,var(--brand),var(--brand2));
+           border-radius:4px;margin:.3em 0 1.2em}
+  .lead{color:var(--muted);margin:0 0 1.6em}
+  a.card{display:block;text-decoration:none;color:inherit;background:var(--soft);
+         border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin-bottom:14px;
+         transition:border-color .15s, transform .15s, box-shadow .15s}
+  a.card:hover{border-color:var(--brand);transform:translateY(-2px);
+               box-shadow:0 6px 18px rgba(37,99,235,.13)}
+  .row{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+  .lvl{font-size:1.15rem;font-weight:700;color:var(--brand)}
+  .go{margin-left:auto;font-weight:700;color:var(--brand);white-space:nowrap}
+  .desc{margin:.35em 0 0;color:var(--muted);font-size:.95rem}
+  .note{margin-top:2em;padding:16px 20px;border:1px solid var(--line);border-radius:14px;
+        font-size:.9rem;color:var(--muted)}
+  .note strong{color:var(--ink)}
+  .note ul{margin:.5em 0 0;padding-left:1.2em}
+  .note li{margin:.3em 0}
+  code{background:#eef2ff;color:var(--brand);border-radius:5px;padding:1px 5px;font-size:.9em}
+  @media (max-width:520px){ .go{margin-left:0;width:100%} }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <span class="kicker">Remise à niveau biologie</span>
+  <h1>Notebook 1 — De l'ADN du patient à la protéine</h1>
+  <div class="barline"></div>
+  <p class="lead">Trois versions du même exercice. Elles posent exactement les mêmes questions et
+  aboutissent au même résultat ; seule la quantité de code déjà écrite change. Choisissez celle qui
+  vous convient — et changez-en en cours de route si besoin, le travail se reprend au même endroit.</p>
+
+  <a class="card" href="https://colab.research.google.com/github/cedricusureau/cours-bio-notebooks/blob/main/notebook1_facile.ipynb">
+    <div class="row">
+      <span class="lvl">🟢 Facile</span>
+      <span class="go">Ouvrir dans Colab →</span>
+    </div>
+    <p class="desc">Le code est écrit. Vous complétez les <code>___</code> laissés en blanc.</p>
+  </a>
+
+  <a class="card" href="https://colab.research.google.com/github/cedricusureau/cours-bio-notebooks/blob/main/notebook1_moyen.ipynb">
+    <div class="row">
+      <span class="lvl">🟡 Moyen</span>
+      <span class="go">Ouvrir dans Colab →</span>
+    </div>
+    <p class="desc">Les étapes sont données en commentaire. Vous écrivez le code.</p>
+  </a>
+
+  <a class="card" href="https://colab.research.google.com/github/cedricusureau/cours-bio-notebooks/blob/main/notebook1_difficile.ipynb">
+    <div class="row">
+      <span class="lvl">🔴 Difficile</span>
+      <span class="go">Ouvrir dans Colab →</span>
+    </div>
+    <p class="desc">Seule la consigne est donnée. À vous de tout écrire.</p>
+  </a>
+
+  <div class="note">
+    <p style="margin:0"><strong>Avant de commencer</strong></p>
+    <ul>
+      <li>Un <strong>compte Google</strong> est nécessaire pour exécuter le notebook. Sans compte, mettez-vous
+      en binôme.</li>
+      <li>Le notebook s'ouvre <strong>en lecture seule</strong>. Faites <em>Fichier → Enregistrer une copie
+      dans Drive</em> pour travailler sur la vôtre : l'original reste intact.</li>
+      <li>Les séquences d'ADN sont <strong>incluses dans le notebook</strong>. Il n'y a rien à télécharger
+      et aucune bibliothèque à installer.</li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>
