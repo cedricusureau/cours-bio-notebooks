@@ -1,6 +1,7 @@
-# Corrigé formateur : à publier seulement après la séance.
-# Retirer la ligne ci-dessous, puis `git add notebook1_corrige.ipynb && git commit`.
+# Corrigés formateur : à publier seulement après la séance.
+# Retirer la ligne du corrigé, puis `git add notebookN_corrige.ipynb && git commit`.
 notebook1_corrige.ipynb
+notebook2_corrige.ipynb
 
 # Divers
 .ipynb_checkpoints/

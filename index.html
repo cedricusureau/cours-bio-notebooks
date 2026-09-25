@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Notebook 1 — De l'ADN du patient à la protéine</title>
+<title>Notebooks — Remise à niveau biologie</title>
 <style>
   :root{
     --ink:#0f172a; --muted:#64748b; --line:#e2e8f0; --brand:#2563eb; --brand2:#0ea5e9;
@@ -16,9 +16,11 @@
   .kicker{display:inline-block;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;
           color:var(--brand);font-weight:700;margin-bottom:.4em}
   h1{font-size:1.75rem;line-height:1.2;margin:.1em 0 .3em;letter-spacing:-.01em}
+  h2{font-size:1.2rem;line-height:1.3;margin:2em 0 .5em;letter-spacing:-.01em}
   .barline{height:5px;width:120px;background:linear-gradient(90deg,var(--brand),var(--brand2));
            border-radius:4px;margin:.3em 0 1.2em}
   .lead{color:var(--muted);margin:0 0 1.6em}
+  .intro{color:var(--muted);margin:0 0 1em;font-size:.95rem}
   a.card{display:block;text-decoration:none;color:inherit;background:var(--soft);
          border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin-bottom:14px;
          transition:border-color .15s, transform .15s, box-shadow .15s}
@@ -28,6 +30,8 @@
   .lvl{font-size:1.15rem;font-weight:700;color:var(--brand)}
   .go{margin-left:auto;font-weight:700;color:var(--brand);white-space:nowrap}
   .desc{margin:.35em 0 0;color:var(--muted);font-size:.95rem}
+  .files{margin:.2em 0 1.2em;font-size:.95rem}
+  .files a{color:var(--brand);font-weight:600}
   .note{margin-top:2em;padding:16px 20px;border:1px solid var(--line);border-radius:14px;
         font-size:.9rem;color:var(--muted)}
   .note strong{color:var(--ink)}
@@ -40,11 +44,13 @@
 <body>
 <div class="wrap">
   <span class="kicker">Remise à niveau biologie</span>
-  <h1>Notebook 1 — De l'ADN du patient à la protéine</h1>
+  <h1>Les notebooks de la journée</h1>
   <div class="barline"></div>
-  <p class="lead">Trois versions du même exercice. Elles posent exactement les mêmes questions et
+  <p class="lead">Chaque notebook existe en trois versions. Elles posent exactement les mêmes questions et
   aboutissent au même résultat ; seule la quantité de code déjà écrite change. Choisissez celle qui
   vous convient — et changez-en en cours de route si besoin, le travail se reprend au même endroit.</p>
+
+  <h2>Notebook 1 — De l'ADN à la protéine</h2>
 
   <a class="card" href="https://colab.research.google.com/github/cedricusureau/cours-bio-notebooks/blob/main/notebook1_facile.ipynb">
     <div class="row">
@@ -70,15 +76,51 @@
     <p class="desc">Seule la consigne est donnée. À vous de tout écrire.</p>
   </a>
 
+  <h2>Notebook 2 — De l'ADN du patient à l'hémoglobine en 3D</h2>
+  <p class="intro">L'ADN du patient comparé à la référence, puis l'hémoglobine normale et celle du patient, prédites par AlphaFold et mesurées par
+  cristallographie. Les prédictions se lancent sur <strong>alphafoldserver.com</strong>, avec le même
+  compte Google que Colab.</p>
+  <p class="files">Fichiers à importer sur le serveur AlphaFold :
+  <a href="data/af3_hb_normal.json" download>af3_hb_normal.json</a> ·
+  <a href="data/af3_hb_patient.json" download>af3_hb_patient.json</a></p>
+
+  <a class="card" href="https://colab.research.google.com/github/cedricusureau/cours-bio-notebooks/blob/main/notebook2_facile.ipynb">
+    <div class="row">
+      <span class="lvl">🟢 Facile</span>
+      <span class="go">Ouvrir dans Colab →</span>
+    </div>
+    <p class="desc">Le code est écrit. Vous complétez les <code>___</code> laissés en blanc.</p>
+  </a>
+
+  <a class="card" href="https://colab.research.google.com/github/cedricusureau/cours-bio-notebooks/blob/main/notebook2_moyen.ipynb">
+    <div class="row">
+      <span class="lvl">🟡 Moyen</span>
+      <span class="go">Ouvrir dans Colab →</span>
+    </div>
+    <p class="desc">Les étapes sont données en commentaire. Vous écrivez le code.</p>
+  </a>
+
+  <a class="card" href="https://colab.research.google.com/github/cedricusureau/cours-bio-notebooks/blob/main/notebook2_difficile.ipynb">
+    <div class="row">
+      <span class="lvl">🔴 Difficile</span>
+      <span class="go">Ouvrir dans Colab →</span>
+    </div>
+    <p class="desc">Seule la consigne est donnée. À vous de tout écrire.</p>
+  </a>
+
   <div class="note">
     <p style="margin:0"><strong>Avant de commencer</strong></p>
     <ul>
-      <li>Un <strong>compte Google</strong> est nécessaire pour exécuter le notebook. Sans compte, mettez-vous
+      <li>Un <strong>compte Google</strong> est nécessaire pour exécuter les notebooks. Sans compte, mettez-vous
       en binôme.</li>
-      <li>Le notebook s'ouvre <strong>en lecture seule</strong>. Faites <em>Fichier → Enregistrer une copie
+      <li>Un notebook s'ouvre <strong>en lecture seule</strong>. Faites <em>Fichier → Enregistrer une copie
       dans Drive</em> pour travailler sur la vôtre : l'original reste intact.</li>
-      <li>Les séquences d'ADN sont <strong>incluses dans le notebook</strong>. Il n'y a rien à télécharger
-      et aucune bibliothèque à installer.</li>
+      <li><strong>Notebook 1</strong> : la séquence d'ADN est incluse dans le notebook. Il n'y a rien à
+      télécharger et aucune bibliothèque à installer.</li>
+      <li><strong>Notebook 2</strong> : la première cellule installe <code>py3Dmol</code>, pour l'affichage 3D, et
+      les structures sont téléchargées depuis la Protein Data Bank et AlphaFold DB, avec une copie de
+      secours dans ce dépôt. Sans compte sur le serveur AlphaFold, le notebook utilise des prédictions
+      de secours.</li>
     </ul>
   </div>
 </div>
