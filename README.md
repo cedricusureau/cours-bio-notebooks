@@ -63,7 +63,7 @@ Fichiers de `data/` utilisés par ce notebook :
 | Fichier | Contenu |
 |---|---|
 | `reference.fasta`, `patient.fasta` | les quatre gènes, référence et patient |
-| `af3_hb_normal.json`, `af3_hb_patient.json` | les deux demandes au serveur AlphaFold, à importer avec *Upload JSON* (optionnel : on peut aussi coller les séquences) |
+| `af3_hb_normal.json`, `af3_hb_patient.json` | les deux demandes au serveur AlphaFold, à importer avec *Upload JSON*. Réservées au formateur, pour qui bloque sur le copier-coller : elles contiennent les séquences que le notebook fait reconstruire. La page d'accueil n'y renvoie pas ; elles se téléchargent depuis `corriges.html` (onglet Notebook 2) |
 | `af3_hb_normal.cif`, `af3_hb_patient.cif` | prédictions d'AlphaFold 3 préparées pour le cours : meilleur modèle (`model_0`) de chaque job |
 
 Les deux `.cif` sont des résultats d'AlphaFold Server, fournis sous les conditions
