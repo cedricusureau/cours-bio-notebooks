@@ -33,23 +33,20 @@ dans la première cellule, qui l'écrit sur le disque de la session puis la reli
 bibliothèque externe n'est installée, aucun fichier n'est téléchargé. Elle est tirée de
 `data/reference.fasta`.
 
-## Notebook 2 — De l'ADN du patient à l'hémoglobine en 3D
+## Notebook 2 — Du patient à AlphaFold
 
-Le notebook commence par l'ADN du patient : quatre gènes de globine exprimés dans le globule
-rouge — `HBA1`, `HBB`, `HBD`, `HBG1` — séquencés chez un sujet de référence et chez le patient.
-Il faut trouver **lequel des quatre est muté**, puis la base, le codon et l'acide aminé modifiés
-(sections 1 à 3). Les séquences sont les séquences codantes RefSeq réelles (`NM_000518.5`,
-`NM_000558.5`, `NM_000519.4`, `NM_000559.3`) ; seul `HBB` diffère chez le patient, d'une base.
-`data/` contient les deux fichiers multi-FASTA (`reference.fasta`, `patient.fasta`).
+Le notebook part de l'ADN du patient : quatre gènes de globine exprimés dans le globule rouge —
+`HBA1`, `HBB`, `HBD`, `HBG1` — séquencés chez un sujet de référence et chez le patient. Les
+séquences sont les séquences codantes RefSeq réelles (`NM_000518.5`, `NM_000558.5`,
+`NM_000519.4`, `NM_000559.3`) ; seul `HBB` diffère chez le patient, d'une base.
 
-Le notebook passe ensuite de la séquence à la structure : la chaîne β du patient a-t-elle la même forme
-que la chaîne normale, et sinon, qu'est-ce que la valine 6 change ? Il compare deux sources : les
-prédictions d'AlphaFold 3 que les participants lancent sur le serveur AlphaFold (tétramère de
-2 chaînes α, 2 chaînes β et 4 hèmes, en version normale et en version patient), et les structures
-expérimentales `2HHB` (hémoglobine normale) et `2HBS` (hémoglobine S). Cinq fonctions à écrire, en
-Python pur : pLDDT moyen, distance entre deux atomes, écart de repliement (dRMSD), nombre de
-voisins d'un résidu, distance minimale entre deux résidus. Durée visée : 45 à 60 minutes au
-niveau 🟡 pour cette partie structure, plus le temps des sections 1 à 3 (non mesuré).
+1. quel gène est muté, quelle base, quel codon, quel acide aminé ;
+2. ce changement d'acide aminé est-il important (classe de la chaîne latérale : chargé,
+   polaire, apolaire) ;
+3. les séquences des chaînes matures, à coller dans le serveur AlphaFold (hémoglobine normale et
+   hémoglobine du patient : 2 chaînes α, 2 chaînes β, 4 hèmes) ;
+4. regarder le résultat sur le serveur, puis dans une vue 3D fournie qui superpose les deux
+   prédictions du cours.
 
 | Niveau | Lien |
 |---|---|
@@ -58,30 +55,28 @@ niveau 🟡 pour cette partie structure, plus le temps des sections 1 à 3 (non 
 | 🔴 Difficile | [Colab](https://colab.research.google.com/github/cedricusureau/cours-bio-notebooks/blob/main/notebook2_difficile.ipynb) |
 
 **Ce dont il a besoin.** Un compte Google, pour Colab et pour le serveur AlphaFold
-(alphafoldserver.com), et le réseau. La première cellule installe `py3Dmol`
-(`!pip install py3Dmol`), seule bibliothèque externe. Les structures sont téléchargées depuis la
-PDB (RCSB) et AlphaFold DB, avec repli sur la copie de `data/`. Quand un participant n'a pas déposé
-ses prédictions, le notebook prend les prédictions de secours de `data/`, et à défaut le modèle
-AlphaFold DB de la chaîne β seule.
+(alphafoldserver.com), et le réseau pour la dernière cellule, qui installe `py3Dmol` et télécharge
+les deux prédictions du cours depuis ce dépôt.
 
 Fichiers de `data/` utilisés par ce notebook :
 
-| Fichier | Contenu | Source |
-|---|---|---|
-| `2HHB.pdb` | désoxyhémoglobine humaine normale (rayons X, 1,74 Å) | RCSB PDB |
-| `2HBS.pdb` | désoxyhémoglobine S, deux tétramères (rayons X, 2,05 Å) | RCSB PDB |
-| `AF-P68871-F1-model_v6.pdb` | chaîne β seule (UniProt P68871, méthionine comprise), pLDDT dans le champ B | AlphaFold DB, licence CC-BY 4.0 |
-| `af3_hb_normal.json`, `af3_hb_patient.json` | les deux jobs du serveur AlphaFold (dialecte `alphafoldserver`, version 1) | générateur du notebook |
-| `af3_hb_normal.cif`, `af3_hb_patient.cif` | prédictions de secours — **à déposer** | serveur AlphaFold |
+| Fichier | Contenu |
+|---|---|
+| `reference.fasta`, `patient.fasta` | les quatre gènes, référence et patient |
+| `af3_hb_normal.json`, `af3_hb_patient.json` | les deux demandes au serveur AlphaFold, à importer avec *Upload JSON* (optionnel : on peut aussi coller les séquences) |
+| `af3_hb_normal.cif`, `af3_hb_patient.cif` | prédictions d'AlphaFold 3 préparées pour le cours : meilleur modèle (`model_0`) de chaque job |
 
-Pour produire les prédictions de secours (une fois, avec le compte du formateur) : sur
-alphafoldserver.com, importer les deux JSON (*Upload JSON*), lancer les deux jobs, télécharger les
-deux `.zip`, puis copier le fichier `…_model_0.cif` de chacun dans `data/`, sous les noms
-`af3_hb_normal.cif` et `af3_hb_patient.cif`.
+Les deux `.cif` sont des résultats d'AlphaFold Server, fournis sous les conditions
+d'utilisation d'AlphaFold Server (« AlphaFold Server Output Terms of Use »,
+[alphafoldserver.com/output-terms](https://alphafoldserver.com/output-terms)), dont le texte est
+dans `data/AF3_OUTPUT_TERMS_OF_USE.md` : usage non commercial uniquement ; ce sont des modèles
+théoriques, sans usage clinique.
 
-Les quatre notebooks et les fichiers de `data/`, sauf les `.cif`, sont produits par
-`tools/gen_notebook2.py`, dans le projet du cours (hors de ce dépôt) : ne pas éditer les `.ipynb` à
-la main.
+`2HHB.pdb`, `2HBS.pdb` et `AF-P68871-F1-model_v6.pdb` servaient à une version précédente du
+notebook (analyse 3D détaillée) ; le notebook actuel ne les utilise pas.
+
+Les quatre notebooks sont produits par `tools/gen_notebook2.py`, dans le projet du cours (hors de
+ce dépôt) : ne pas éditer les `.ipynb` à la main.
 
 ## Corrigés
 
