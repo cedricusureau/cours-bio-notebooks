@@ -81,18 +81,21 @@ ce dépôt) : ne pas éditer les `.ipynb` à la main.
 ## Notebook 3 (bonus) — Pourquoi cette mutation ?
 
 Les homozygotes SS ont la drépanocytose, et pourtant l'allèle HbS dépasse 15 % dans plusieurs pays
-d'Afrique. Le notebook suit l'explication par le paludisme, en deux parties.
+d'Afrique. Pourquoi ? Le notebook ne donne pas la réponse : elle se déduit des données, en deux
+parties.
 
-1. **Où trouve-t-on l'allèle HbS ?** Le tableau par pays : les pays classés par fréquence de
-   l'allèle, puis par nombre de naissances SS ; moyennes par région OMS ; nuage de points
-   fréquence / incidence du paludisme en 2000 et coefficient de corrélation de Pearson écrit à la
-   main ; les pays qui s'écartent de la tendance (migrations, paludisme éliminé, autres allèles
-   protecteurs).
+1. **Où trouve-t-on l'allèle HbS, et pourquoi là ?** Le tableau par pays : les pays classés par
+   fréquence de l'allèle, puis par nombre de naissances SS ; moyennes par région OMS. Ensuite,
+   trois maladies infectieuses candidates (tuberculose, VIH, paludisme) : trois nuages de points,
+   et le coefficient de corrélation de Pearson écrit à la main, sur tous les pays puis sur la
+   seule région Afrique. Une étude cas-témoins suit : le pourcentage d'enfants AS dans quatre
+   groupes de malades en Gambie (Hill et al. 1991), et les rapports des cotes. Enfin, les pays qui
+   s'écartent de la tendance.
 2. **Une mutation neuve : se perd-elle ou s'installe-t-elle ?** Modèle de Wright-Fisher avec
-   sélection, en Python pur (`random`) : une génération, une trajectoire, puis 1 000 trajectoires
-   avec et sans paludisme. Environ 3 mutations neuves sur 4 sont perdues par dérive, malgré
-   l'avantage des hétérozygotes AS. C'est le même ordre de grandeur que les simulations de
-   Shriner et Rotimi (2018) : 74,6 %.
+   sélection, en Python pur (`random`) : une génération, une trajectoire, puis 1 000 trajectoires,
+   avec et sans l'avantage des hétérozygotes AS. Environ 3 mutations neuves sur 4 sont perdues par
+   dérive malgré cet avantage, le même ordre de grandeur que les simulations de Shriner et Rotimi
+   (2018) : 74,6 %.
 
 | Niveau | Lien |
 |---|---|
@@ -104,7 +107,7 @@ d'Afrique. Le notebook suit l'explication par le paludisme, en deux parties.
 les graphiques utilisent `matplotlib`, déjà installé dans Colab. Rien n'est téléchargé. Le
 corrigé s'exécute en quelques secondes.
 
-`data/hbs_paludisme.csv` contient une ligne par pays ou territoire : 190 lignes, soit la table
+`data/hbs_par_pays.csv` contient une ligne par pays ou territoire : 190 lignes, soit la table
 source entière moins le Sahara occidental, qui n'a de région OMS dans aucune des deux sources.
 
 | Colonne | Contenu | Source |
@@ -115,6 +118,8 @@ source entière moins le Sahara occidental, qui n'a de région OMS dans aucune d
 | `nombre_enquetes` | nombre d'enquêtes utilisées par le modèle pour ce pays | idem |
 | `naissances_ss_par_an` | nouveau-nés SS par an en 2010, médiane | idem |
 | `incidence_paludisme_2000` | cas de paludisme estimés pour 1 000 habitants exposés, en 2000 ; vide sans estimation OMS | OMS, Global Health Observatory, `MALARIA_EST_INCIDENCE` |
+| `incidence_tuberculose_2000` | cas de tuberculose pour 100 000 habitants, en 2000 ; vide sans donnée | OMS, Global Health Observatory, `MDG_0000000020` |
+| `prevalence_vih_2000` | % des adultes de 15 à 49 ans vivant avec le VIH, en 2000 ; l'OMS publie « <0.1 » avec 0,1 comme valeur numérique, reprise telle quelle ; vide sans donnée | OMS, Global Health Observatory, `MDG_0000000029` |
 
 Le fichier est produit par `tools/data_notebook3.py`, dans le projet du cours. Ce script extrait
 la Web Table 1 du PDF de l'annexe et interroge l'API de l'OMS. Les quatre notebooks sont produits
@@ -124,11 +129,14 @@ par `tools/gen_notebook3.py` : ne pas éditer les `.ipynb` à la main.
 - Piel FB et al. *Lancet* 2013;381:142–151, doi:10.1016/S0140-6736(12)61229-X. Le tableau
   reprend des valeurs numériques de la Web Table 1, avec cette référence. Le PDF de l'annexe
   (© Elsevier) n'est pas redistribué.
-- OMS, Global Health Observatory, indicateur *Estimated malaria incidence (per 1000 population at
-  risk)* (`MALARIA_EST_INCIDENCE`), année 2000, consulté en septembre 2026. Réutilisation selon
+- OMS, Global Health Observatory, indicateurs `MALARIA_EST_INCIDENCE` (*Estimated malaria
+  incidence per 1000 population at risk*), `MDG_0000000020` (*Incidence of tuberculosis per
+  100 000 population per year*) et `MDG_0000000029` (*Prevalence of HIV among adults aged 15 to
+  49, %*), année 2000, consultés en septembre 2026. Réutilisation selon
   les [conditions de l'OMS pour ses données](https://www.who.int/about/policies/publishing/data-policy/terms-and-conditions).
 - Chiffres cités dans le texte : Piel et al. 2010 (*Nat Commun* 1:104), Hay et al. 2004 (*Lancet
-  Infect Dis* 4:327), Taylor et al. 2012 (*Lancet Infect Dis* 12:457), Grosse et al. 2011 (*Am J
+  Infect Dis* 4:327), Taylor et al. 2012 (*Lancet Infect Dis* 12:457 ; son tableau des études
+  cas-témoins fournit les effectifs de Hill et al. 1991, *Nature* 352:595), Grosse et al. 2011 (*Am J
   Prev Med* 41:S398), Shriner et Rotimi 2018 (*Am J Hum Genet* 102:547), Ojodu et al. 2014
   (*MMWR* 63:1155), Flint et al. 1986 (*Nature* 321:744). Les effectifs d'Ibadan (AA 9 365,
   AS 2 993, SS 29) sont cités d'après F. J. Ayala, *Encyclopædia Britannica*, article
