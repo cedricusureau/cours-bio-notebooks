@@ -2,6 +2,7 @@
 # Retirer la ligne du corrigé, puis `git add notebookN_corrige.ipynb && git commit`.
 notebook1_corrige.ipynb
 notebook2_corrige.ipynb
+notebook3_corrige.ipynb
 
 # Divers
 .ipynb_checkpoints/

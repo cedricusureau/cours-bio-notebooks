@@ -1,0 +1,191 @@
+pays,code_iso3,region_oms,frequence_allele_hbs,nombre_enquetes,naissances_ss_par_an,incidence_paludisme_2000
+Afghanistan,AFG,Méditerranée orientale,0.0,1,0,84.48
+Afrique du Sud,ZAF,Afrique,0.003,3,73,3.86
+Albanie,ALB,Europe,0.014,1,30,
+Algérie,DZA,Afrique,0.007,18,191,0.02
+Allemagne,DEU,Europe,0.004,0,85,
+Angola,AGO,Afrique,0.137,18,8364,326.54
+Antilles néerlandaises,ANT,Amériques,0.023,2,4,
+Arabie saoudite,SAU,Méditerranée orientale,0.018,28,691,3.81
+Argentine,ARG,Amériques,0.0,0,4,2.36
+Arménie,ARM,Europe,0.0,0,0,0.05
+Aruba,ABW,Amériques,0.016,1,1,
+Australie,AUS,Pacifique occidental,0.001,2,5,
+Autriche,AUT,Europe,0.002,0,1,
+Azerbaïdjan,AZE,Europe,0.0,0,0,8.12
+Bahamas,BHS,Amériques,0.024,1,8,
+Bahreïn,BHR,Méditerranée orientale,0.05,0,59,
+Bangladesh,BGD,Asie du Sud-Est,0.001,0,16,6.62
+Barbade,BRB,Amériques,0.025,0,4,
+Bélarus,BLR,Europe,0.0,0,0,
+Belgique,BEL,Europe,0.008,18,29,
+Belize,BLZ,Amériques,0.075,3,47,8.94
+Bénin,BEN,Afrique,0.159,9,4543,416.0
+Bhoutan,BTN,Asie du Sud-Est,0.001,0,0,13.44
+Birmanie,MMR,Asie du Sud-Est,0.0,6,0,34.4
+Bolivie,BOL,Amériques,0.0,0,0,11.69
+Bosnie-Herzégovine,BIH,Europe,0.003,0,1,
+Botswana,BWA,Afrique,0.003,4,4,17.23
+Brésil,BRA,Amériques,0.017,47,3244,21.54
+Brunéi Darussalam,BRN,Pacifique occidental,0.0,0,0,
+Bulgarie,BGR,Europe,0.007,0,17,
+Burkina Faso,BFA,Afrique,0.056,51,3124,597.17
+Burundi,BDI,Afrique,0.04,2,889,427.48
+Cambodge,KHM,Pacifique occidental,0.0,1,0,75.47
+Cameroun,CMR,Afrique,0.12,34,6915,394.85
+Canada,CAN,Amériques,0.004,3,45,
+Cap-Vert,CPV,Afrique,0.026,3,18,1.22
+Chili,CHL,Amériques,0.0,4,0,
+Chine,CHN,Pacifique occidental,0.0,8,0,0.02
+Chypre,CYP,Europe,0.007,1,2,
+Colombie,COL,Amériques,0.008,2,321,24.35
+Comores,COM,Afrique,0.018,2,25,66.37
+Corée du Nord,PRK,Asie du Sud-Est,0.0,0,0,9.79
+Corée du Sud,KOR,Pacifique occidental,0.0,0,0,1.28
+Costa Rica,CRI,Amériques,0.016,1,60,1.36
+Côte d'Ivoire,CIV,Afrique,0.062,7,3567,490.52
+Croatie,HRV,Europe,0.002,0,1,
+Cuba,CUB,Amériques,0.03,1,240,
+Danemark,DNK,Europe,0.0,0,0,
+Djibouti,DJI,Méditerranée orientale,0.001,0,0,3.07
+Égypte,EGY,Méditerranée orientale,0.012,5,1196,0.0
+Émirats arabes unis,ARE,Méditerranée orientale,0.004,2,4,
+Équateur,ECU,Amériques,0.0,0,0,14.54
+Érythrée,ERI,Afrique,0.003,0,9,19.0
+Espagne,ESP,Europe,0.007,4,149,
+Estonie,EST,Europe,0.0,0,0,
+Eswatini,SWZ,Afrique,0.006,0,4,2.7
+États-Unis,USA,Amériques,0.011,25,2843,
+Éthiopie,ETH,Afrique,0.003,8,137,189.18
+Fidji,FJI,Pacifique occidental,0.0,0,0,
+Finlande,FIN,Europe,0.0,0,0,
+France,FRA,Europe,0.013,7,520,
+Gabon,GAB,Afrique,0.28,3,864,364.66
+Gambie,GMB,Afrique,0.075,29,418,309.72
+Géorgie,GEO,Europe,0.0,0,0,5.66
+Ghana,GHA,Afrique,0.087,52,5474,430.36
+Grèce,GRC,Europe,0.026,31,206,
+Grenade,GRD,Amériques,0.037,0,6,
+Guadeloupe,GLP,Amériques,0.031,1,14,
+Guam,GUM,Pacifique occidental,0.0,0,0,
+Guatemala,GTM,Amériques,0.011,0,252,7.21
+Guinée,GIN,Afrique,0.168,1,5232,415.77
+Guinée équatoriale,GNQ,Afrique,0.192,2,385,334.3
+Guinée-Bissau,GNB,Afrique,0.041,4,192,396.46
+Guyana,GUY,Amériques,0.021,0,17,43.97
+Guyane française,GUF,Amériques,0.015,6,5,49.83
+Haïti,HTI,Amériques,0.051,8,1088,9.71
+Honduras,HND,Amériques,0.049,0,772,8.64
+Hong Kong,HKG,Pacifique occidental,0.0,0,0,
+Hongrie,HUN,Europe,0.001,1,0,
+Îles Salomon,SLB,Pacifique occidental,0.0,0,0,583.82
+Îles Vierges des États-Unis,VIR,Amériques,0.008,0,0,
+Inde,IND,Asie du Sud-Est,0.023,113,42016,21.8
+Indonésie,IDN,Pacifique occidental,0.0,14,1,5.28
+Irak,IRQ,Méditerranée orientale,0.01,1,629,0.59
+Iran,IRN,Méditerranée orientale,0.011,0,862,29.07
+Irlande,IRL,Europe,0.001,0,0,
+Islande,ISL,Europe,0.0,0,0,
+Italie,ITA,Europe,0.005,41,91,
+Jamaïque,JAM,Amériques,0.037,4,137,
+Japon,JPN,Pacifique occidental,0.0,1,0,
+Jordanie,JOR,Méditerranée orientale,0.017,2,145,
+Kazakhstan,KAZ,Europe,0.0,0,0,
+Kenya,KEN,Afrique,0.038,51,4475,220.26
+Kirghizistan,KGZ,Europe,0.0,0,0,0.0
+Koweït,KWT,Méditerranée orientale,0.031,0,116,
+La Réunion,REU,Afrique,0.001,0,0,
+Laos,LAO,Pacifique occidental,0.0,0,0,31.76
+Lesotho,LSO,Afrique,0.001,0,0,
+Lettonie,LVA,Europe,0.0,0,0,
+Liban,LBN,Méditerranée orientale,0.049,1,251,
+Libéria,LBR,Afrique,0.046,15,562,397.08
+Libye,LBY,Méditerranée orientale,0.021,4,188,
+Lituanie,LTU,Europe,0.0,0,0,
+Luxembourg,LUX,Europe,0.005,0,0,
+Madagascar,MDG,Afrique,0.061,37,3379,54.85
+Malaisie,MYS,Pacifique occidental,0.0,6,0,13.83
+Malawi,MWI,Afrique,0.033,15,1688,452.55
+Maldives,MDV,Asie du Sud-Est,0.0,0,0,
+Mali,MLI,Afrique,0.057,8,2701,394.98
+Malte,MLT,Europe,0.015,0,2,
+Maroc,MAR,Méditerranée orientale,0.003,0,40,0.0
+Martinique,MTQ,Amériques,0.035,1,12,
+Maurice,MUS,Afrique,0.0,0,0,
+Mauritanie,MRT,Afrique,0.05,1,433,96.39
+Mayotte,MYT,Afrique,0.027,0,12,
+Mexique,MEX,Amériques,0.007,34,641,3.53
+Micronésie,FSM,Pacifique occidental,0.0,0,0,
+Moldavie,MDA,Europe,0.0,0,0,
+Mongolie,MNG,Pacifique occidental,0.0,0,0,
+Monténégro,MNE,Europe,0.005,0,1,
+Mozambique,MOZ,Afrique,0.027,14,1645,473.67
+Namibie,NAM,Afrique,0.01,8,30,53.57
+Népal,NPL,Asie du Sud-Est,0.002,1,11,6.73
+Nicaragua,NIC,Amériques,0.023,0,204,6.78
+Niger,NER,Afrique,0.08,7,4965,359.24
+Nigeria,NGA,Afrique,0.171,24,85186,401.79
+Norvège,NOR,Europe,0.0,0,0,
+Nouvelle-Calédonie,NCL,Pacifique occidental,0.0,0,0,
+Nouvelle-Zélande,NZL,Pacifique occidental,0.0,0,0,
+Oman,OMN,Méditerranée orientale,0.001,2,0,0.0
+Ouganda,UGA,Afrique,0.082,11,10143,482.77
+Ouzbékistan,UZB,Europe,0.0,0,0,5.08
+Pakistan,PAK,Méditerranée orientale,0.002,1,228,6.08
+Panama,PAN,Amériques,0.03,3,140,0.54
+Papouasie-Nouvelle-Guinée,PNG,Pacifique occidental,0.0,1,0,264.08
+Paraguay,PRY,Amériques,0.003,0,7,37.32
+Pays-Bas,NLD,Europe,0.011,2,82,
+Pérou,PER,Amériques,0.0,10,0,13.19
+Philippines,PHL,Pacifique occidental,0.0,0,0,1.73
+Pologne,POL,Europe,0.0,0,0,
+Polynésie française,PYF,Pacifique occidental,0.0,0,0,
+Porto Rico,PRI,Amériques,0.004,1,2,
+Portugal,PRT,Europe,0.01,2,41,
+Qatar,QAT,Méditerranée orientale,0.032,0,41,
+République centrafricaine,CAF,Afrique,0.077,2,976,438.12
+République démocratique du Congo,COD,Afrique,0.165,11,38217,458.24
+République dominicaine,DOM,Amériques,0.019,0,247,0.32
+République du Congo,COG,Afrique,0.145,4,1560,349.6
+Roumanie,ROU,Europe,0.001,0,2,
+Royaume-Uni,GBR,Europe,0.009,4,296,
+Russie,RUS,Europe,0.0,0,0,
+Rwanda,RWA,Afrique,0.023,2,601,180.43
+Saint-Vincent-et-les-Grenadines,VCT,Amériques,0.045,0,6,
+Sainte-Lucie,LCA,Amériques,0.049,1,12,
+Salvador,SLV,Amériques,0.014,1,80,0.62
+Samoa,WSM,Pacifique occidental,0.0,0,0,
+Sao Tomé-et-Principe,STP,Afrique,0.094,0,41,222.02
+Sénégal,SEN,Afrique,0.067,20,2535,230.37
+Serbie,SRB,Europe,0.004,0,10,
+Sierra Leone,SLE,Afrique,0.164,0,2838,424.58
+Singapour,SGP,Pacifique occidental,0.0,1,0,
+Slovaquie,SVK,Europe,0.001,0,0,
+Slovénie,SVN,Europe,0.001,0,0,
+Somalie,SOM,Méditerranée orientale,0.002,2,13,133.15
+Soudan,SDN,Méditerranée orientale,0.043,32,4567,89.72
+Sri Lanka,LKA,Asie du Sud-Est,0.001,28,2,47.33
+Suède,SWE,Europe,0.0,0,0,
+Suisse,CHE,Europe,0.004,0,6,
+Surinam,SUR,Amériques,0.03,0,19,161.38
+Syrie,SYR,Méditerranée orientale,0.025,4,901,0.0
+Tadjikistan,TJK,Europe,0.0,0,0,9.08
+Tanzanie,TZA,Afrique,0.074,57,11022,334.61
+Tchad,TCD,Afrique,0.051,6,2045,272.13
+Tchéquie,CZE,Europe,0.001,0,0,
+Thaïlande,THA,Asie du Sud-Est,0.0,0,0,6.57
+Timor oriental,TLS,Asie du Sud-Est,0.0,0,0,158.38
+Togo,TGO,Afrique,0.125,4,2175,445.12
+Tonga,TON,Pacifique occidental,0.0,0,0,
+Trinité-et-Tobago,TTO,Amériques,0.038,1,56,
+Tunisie,TUN,Méditerranée orientale,0.011,12,81,
+Turkménistan,TKM,Europe,0.0,0,0,0.08
+Turquie,TUR,Europe,0.005,45,330,2.69
+Ukraine,UKR,Europe,0.0,0,0,
+Uruguay,URY,Amériques,0.001,0,1,
+Vanuatu,VUT,Pacifique occidental,0.0,0,0,124.37
+Vénézuela,VEN,Amériques,0.014,40,435,2.9
+Viêt Nam,VNM,Pacifique occidental,0.0,0,0,3.54
+Yémen,YEM,Méditerranée orientale,0.004,1,80,83.3
+Zambie,ZMB,Afrique,0.112,11,5652,360.33
+Zimbabwe,ZWE,Afrique,0.021,7,483,102.59
