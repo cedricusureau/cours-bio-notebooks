@@ -147,3 +147,15 @@ par `tools/gen_notebook3.py` : ne pas éditer les `.ipynb` à la main.
 `notebook1_corrige.ipynb`, `notebook2_corrige.ipynb` et `notebook3_corrige.ipynb` ne sont pas
 publiés tant que la séance n'a pas eu lieu : ils sont exclus par le `.gitignore`. Pour publier
 l'un d'eux, retirer sa ligne du `.gitignore` puis committer.
+
+**Version chiffrée, pour le formateur :
+[corriges.html](https://cedricusureau.github.io/cours-bio-notebooks/corriges.html).** La page
+contient les trois corrigés déjà exécutés, avec leurs sorties et leurs figures. Un bouton permet
+aussi de télécharger le `.ipynb` exécuté, à ouvrir dans Colab (*Fichier → Importer un notebook*).
+Elle ne s'ouvre qu'avec le mot de passe : sans lui, elle ne contient que du texte chiffré
+(AES-256-GCM, clé dérivée du mot de passe par PBKDF2-SHA256, 600 000 itérations). Le
+déchiffrement se fait dans le navigateur.
+
+La page est produite par `tools/gen_corriges.py`, dans le projet du cours, qui exécute les
+corrigés puis chiffre le résultat. Le mot de passe n'est pas dans ce dépôt. Relancer le script
+après chaque modification d'un notebook.
